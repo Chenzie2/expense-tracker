@@ -26,6 +26,11 @@ function App() {
     </div>
   );
 }
+function handleDeleteExpense(indexToDelete) {
+  const updatedExpenses = expenses.filter((_, index) => index !== indexToDelete);
+  setExpenses(updatedExpenses);
+}
+
 
 export default App;
 
