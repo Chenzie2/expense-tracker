@@ -6,7 +6,7 @@ function ExpenseTable({ expenses }) {
       <thead>
         <tr>
           <th>Description</th>
-          <th>Amount ($)</th>
+          <th>Amount (KES)</th>
           <th>Category</th>
         </tr>
       </thead>
@@ -14,7 +14,12 @@ function ExpenseTable({ expenses }) {
         {expenses.map((expense, index) => (
           <tr key={index}>
             <td>{expense.description}</td>
-            <td>{expense.amount}</td>
+            <td>
+              {new Intl.NumberFormat("en-KE", {
+                style: "currency",
+                currency: "KES",
+              }).format(expense.amount)}
+            </td>
             <td>{expense.category}</td>
           </tr>
         ))}
