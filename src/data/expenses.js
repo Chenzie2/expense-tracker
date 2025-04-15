@@ -1,93 +1,63 @@
 const Expenses = [
   {
     id: 1,
-    description: "Chapati and Beans (Cafeteria)",
+    description: "Chapati Beans",
     amount: 80,
     category: "Food"
   },
   {
     id: 2,
-    description: "Matatu to Campus",
+    description: "Matatu to church",
     amount: 50,
     category: "Transport"
   },
   {
     id: 3,
-    description: "Photocopy Notes (10 pages)",
-    amount: 20,
-    category: "Academic"
+    description: "Programming book",
+    amount: 1200,
+    category: "Academics"
   },
   {
     id: 4,
-    description: "Monthly WiFi Bundles",
-    amount: 1000,
-    category: "Internet"
+    description: "Worship team shirt",
+    amount: 800,
+    category: "Ministry"
   },
   {
     id: 5,
-    description: "Textbook (Second-hand)",
-    amount: 800,
-    category: "Academic"
-  },
-  {
-    id: 6,
-    description: "Campus Party Contribution",
-    amount: 300,
-    category: "Social"
-  },
-  {
-    id: 7,
-    description: "Airtime (Weekly)",
-    amount: 100,
-    category: "Communication"
-  },
-  {
-    id: 8,
-    description: "Printing Assignment",
-    amount: 40,
-    category: "Academic"
-  },
-  {
-    id: 9,
-    description: "Room Rent (Monthly)",
-    amount: 5000,
-    category: "Housing"
-  },
-  {
-    id: 10,
-    description: "Mandazi and Tea (Breakfast)",
-    amount: 50,
-    category: "Food"
-  },
-  {
-    id: 11,
-    description: "USB Flash Drive 16GB",
-    amount: 600,
-    category: "Academic"
-  },
-  {
-    id: 12,
-    description: "Laundry (Weekly)",
-    amount: 200,
-    category: "Personal Care"
-  },
-  {
-    id: 13,
-    description: "Football Bet (Weekend)",
-    amount: 100,
+    description: "Youtube Premium",
+    amount: 499,
     category: "Entertainment"
   },
   {
-    id: 14,
-    description: "Emergency Meds (Painkillers)",
-    amount: 150,
-    category: "Health"
+    id: 6,
+    description: "Campus transport",
+    amount: 100,
+    category: "Transport"
   },
   {
-    id: 15,
-    description: "Stapler for Notes",
-    amount: 120,
-    category: "Academic"
+    id: 7,
+    description: "Prison Mission",
+    amount: 1500,
+    category: "Ministry"
+  },
+  {
+    id: 8,
+    description: "Lunch at cafeteria",
+    amount: 150,
+    category: "Food"
+  },
+  {
+    id: 9,
+    description: "Canva Pro",
+    amount: 850,
+    category: "Academics"
+  },
+  {
+    id: 10,
+    description: "Movie ticket",
+    amount: 500,
+    category: "Entertainment"
   }
 ];
 

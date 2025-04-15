@@ -13,12 +13,17 @@ function ExpenseTable({ expenses, onDelete }) {
       </thead>
       <tbody>
         {expenses.map((expense, index) => (
-          <tr key={index}>
+          <tr key={expense.id}> {/* Changed from index to expense.id for better React reconciliation */}
             <td>{expense.description}</td>
-            <td>{expense.amount}</td>
+            <td>{expense.amount.toLocaleString()}</td> {/* Added toLocaleString for better number formatting */}
             <td>{expense.category}</td>
             <td>
-              <button onClick={() => onDelete(index)}>Delete</button>
+              <button 
+                onClick={() => onDelete(index)}
+                className="delete-btn"
+              >
+                Delete
+              </button>
             </td>
           </tr>
         ))}
