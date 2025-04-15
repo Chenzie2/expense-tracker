@@ -1,47 +1,47 @@
 import React, { useState } from "react";
 
 function ExpenseForm({ onAddExpense }) {
-  const [formData, setFormData] = useState({
-    description: "",
-    amount: "",
-    category: "",
-  });
-
-  function handleChange(e) {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  }
+  const [description, setDescription] = useState("");
+  const [amount, setAmount] = useState("");
+  const [category, setCategory] = useState("");
 
   function handleSubmit(e) {
     e.preventDefault();
     const newExpense = {
-      ...formData,
-      id: crypto.randomUUID(),
+      description,
+      amount: parseFloat(amount),
+      category,
     };
     onAddExpense(newExpense);
-    setFormData({ description: "", amount: "", category: "" });
+
+    // Reset the form
+    setDescription("");
+    setAmount("");
+    setCategory("");
   }
 
   return (
     <form onSubmit={handleSubmit}>
       <input
-        name="description"
+        type="text"
         placeholder="Description"
-        value={formData.description}
-        onChange={handleChange}
+        value={description}
+        onChange={(e) => setDescription(e.target.value)}
+        required
       />
       <input
-        name="amount"
-        placeholder="Amount"
         type="number"
-        value={formData.amount}
-        onChange={handleChange}
+        placeholder="Amount"
+        value={amount}
+        onChange={(e) => setAmount(e.target.value)}
+        required
       />
       <input
-        name="category"
+        type="text"
         placeholder="Category"
-        value={formData.category}
-        onChange={handleChange}
+        value={category}
+        onChange={(e) => setCategory(e.target.value)}
+        required
       />
       <button type="submit">Add Expense</button>
     </form>
