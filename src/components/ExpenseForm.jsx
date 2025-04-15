@@ -4,13 +4,16 @@ function ExpenseForm({ onAddExpense }) {
   const [description, setDescription] = useState("");
   const [amount, setAmount] = useState("");
   const [category, setCategory] = useState("");
+  const [date, setDate] = useState("");
 
   function handleSubmit(e) {
     e.preventDefault();
     const newExpense = {
+      id: Date.now(), //unique ID
       description,
       amount: parseFloat(amount),
       category,
+      date,
     };
     onAddExpense(newExpense);
 
@@ -18,6 +21,7 @@ function ExpenseForm({ onAddExpense }) {
     setDescription("");
     setAmount("");
     setCategory("");
+    setDate("");
   }
 
   return (
@@ -41,6 +45,12 @@ function ExpenseForm({ onAddExpense }) {
         placeholder="Category"
         value={category}
         onChange={(e) => setCategory(e.target.value)}
+        required
+      />
+      <input
+        type="date"
+        value={date}
+        onChange={(e) => setDate(e.target.value)}
         required
       />
       <button type="submit">Add Expense</button>
