@@ -7,7 +7,7 @@
   padding: 1rem;
 }
 
-/* Left = Form */
+/* Left side form */
 .form-container {
   flex: 1;
   background: white;
@@ -16,7 +16,7 @@
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
-/* Right = Search + Table */
+/* Right side: search, sort, table */
 .table-container {
   flex: 2;
   background: white;
@@ -25,74 +25,7 @@
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
-/* Form Elements */
-form input {
-  width: 100%;
-  margin-bottom: 1rem;
-  padding: 0.75rem;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-}
-
-form button {
-  background-color: #a56cc1;
-  color: white;
-  border: none;
-  padding: 0.75rem 1.2rem;
-  border-radius: 8px;
-  transition: background-color 0.3s;
-}
-
-form button:hover {
-  background-color: #8f5bb1;
-}
-
-/* Search Bar */
-input[type="text"] {
-  width: 100%;
-  margin-bottom: 1.5rem;
-  padding: 0.75rem;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-}
-
-/* Table */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  text-align: left;
-}
-
-th {
-  background-color: #2d2d2d;
-  color: white;
-  padding: 0.75rem;
-  font-weight: bold;
-}
-
-td {
-  padding: 0.75rem;
-  border-top: 1px solid #eee;
-}
-
-tr:nth-child(even) {
-  background-color: #f2e6f7;
-}
-
-.delete-btn {
-  background: transparent;
-  color: #a56cc1;
-  border: 1px solid #a56cc1;
-  padding: 0.4rem 0.8rem;
-  border-radius: 6px;
-  transition: all 0.2s ease;
-}
-
-.delete-btn:hover {
-  background-color: #f0d9f7;
-}
-
-/* Responsive */
+/* Responsive layout */
 @media (max-width: 768px) {
   .app-container {
     flex-direction: column;

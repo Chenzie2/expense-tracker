@@ -1,8 +1,9 @@
-import React, { useState } from 'react'; 
+import React, { useState } from 'react';
+import './App.css'; 
 import ExpenseTable from './components/ExpenseTable';
 import ExpenseForm from './components/ExpenseForm';
 import SearchBar from './components/SearchBar';
-import initialExpenses from './data/expenses'; 
+import initialExpenses from './data/expenses';
 
 function App() {
   const [expenses, setExpenses] = useState(initialExpenses);
@@ -28,7 +29,6 @@ function App() {
     expense.category.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  // Sorting logic
   if (sortOption === "description") {
     filteredExpenses = [...filteredExpenses].sort((a, b) =>
       a.description.localeCompare(b.description)
@@ -40,22 +40,26 @@ function App() {
   }
 
   return (
-    <div className="app">
-      <h1>Expense Tracker</h1>
-      
-      <SearchBar searchTerm={searchTerm} onSearch={setSearchTerm} />
-      
-      <div className="sort-controls">
-        <label htmlFor="sort">Sort: </label>
-        <select id="sort" value={sortOption} onChange={handleSortChange}>
-          <option value="default">Default</option>
-          <option value="description">By Description</option>
-          <option value="category">By Category</option>
-        </select>
-      </div>
-
-      <div className="main-content">
+    <div className="app-container">
+      {/* LEFT: Form */}
+      <div className="form-container">
+        <h2>Add Expense</h2>
         <ExpenseForm onAddExpense={handleAddExpense} />
+      </div>
+  
+      {/* RIGHT: Search, Sort, Table */}
+      <div className="table-container">
+        <SearchBar searchTerm={searchTerm} onSearch={setSearchTerm} />
+  
+        <div className="sort-controls" style={{ marginBottom: "1rem" }}>
+          <label htmlFor="sort">Sort: </label>
+          <select id="sort" value={sortOption} onChange={handleSortChange}>
+            <option value="default">Default</option>
+            <option value="description">By Description</option>
+            <option value="category">By Category</option>
+          </select>
+        </div>
+  
         <ExpenseTable 
           expenses={filteredExpenses} 
           onDelete={handleDeleteExpense} 
@@ -63,6 +67,6 @@ function App() {
       </div>
     </div>
   );
-}
+}  
 
 export default App;
