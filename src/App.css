@@ -1,42 +1,101 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
+.app-container {
+  display: flex;
+  max-width: 1100px;
+  width: 100%;
+  margin: 3rem auto;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+/* Left = Form */
+.form-container {
+  flex: 1;
+  background: white;
   padding: 2rem;
-  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Right = Search + Table */
+.table-container {
+  flex: 2;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Form Elements */
+form input {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  background-color: #a56cc1;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.2rem;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #8f5bb1;
+}
+
+/* Search Bar */
+input[type="text"] {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th {
+  background-color: #2d2d2d;
+  color: white;
+  padding: 0.75rem;
+  font-weight: bold;
+}
+
+td {
+  padding: 0.75rem;
+  border-top: 1px solid #eee;
+}
+
+tr:nth-child(even) {
+  background-color: #f2e6f7;
+}
+
+.delete-btn {
+  background: transparent;
+  color: #a56cc1;
+  border: 1px solid #a56cc1;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.delete-btn:hover {
+  background-color: #f0d9f7;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
+    padding: 1rem;
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
