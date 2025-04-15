@@ -8,18 +8,20 @@ function ExpenseTable({ expenses, onDelete }) {
           <th>Description</th>
           <th>Amount (KES)</th>
           <th>Category</th>
+          <th>Date</th>
           <th>Action</th>
         </tr>
       </thead>
       <tbody>
-        {expenses.map((expense, index) => (
-          <tr key={expense.id}> {/* Changed from index to expense.id for better React reconciliation */}
+        {expenses.map((expense) => (
+          <tr key={expense.id}>
             <td>{expense.description}</td>
-            <td>{expense.amount.toLocaleString()}</td> {/* Added toLocaleString for better number formatting */}
+            <td>{expense.amount.toLocaleString()}</td>
             <td>{expense.category}</td>
+            <td>{expense.date}</td>
             <td>
               <button 
-                onClick={() => onDelete(index)}
+                onClick={() => onDelete(expense.id)}
                 className="delete-btn"
               >
                 Delete

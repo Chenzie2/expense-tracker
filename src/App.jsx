@@ -1,9 +1,19 @@
+import React, { useState } from 'react'; 
+import ExpenseTable from './components/ExpenseTable';
+import ExpenseForm from './components/ExpenseForm';
+import SearchBar from './components/SearchBar';
+import initialExpenses from './data/expenses'; 
+
 function App() {
   const [expenses, setExpenses] = useState(initialExpenses);
   const [searchTerm, setSearchTerm] = useState("");
 
   function handleAddExpense(newExpense) {
     setExpenses([...expenses, newExpense]);
+  }
+
+  function handleDeleteExpense(idToDelete) {
+    setExpenses(expenses.filter(expense => expense.id !== idToDelete));
   }
 
   const filteredExpenses = expenses.filter((expense) =>
@@ -16,14 +26,12 @@ function App() {
       <h1>Expense Tracker</h1>
       <SearchBar searchTerm={searchTerm} onSearch={setSearchTerm} />
       <ExpenseForm onAddExpense={handleAddExpense} />
-      <ExpenseTable expenses={filteredExpenses} />
+      <ExpenseTable 
+        expenses={filteredExpenses} 
+        onDelete={handleDeleteExpense} 
+      />
     </div>
   );
 }
-function handleDeleteExpense(indexToDelete) {
-  const updatedExpenses = expenses.filter((_, index) => index !== indexToDelete);
-  setExpenses(updatedExpenses);
-}
-
 
 export default App;
