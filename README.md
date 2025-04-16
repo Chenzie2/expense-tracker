@@ -2,8 +2,6 @@
 
 A modern expense tracking application with intuitive controls and real-time filtering. Perfect for personal finance management.
 
-![Expense Tracker Screenshot](./src/images/screenshot.png)
-
 
 ## Features
 
@@ -31,7 +29,7 @@ A modern expense tracking application with intuitive controls and real-time filt
 |----------------|----------------------|
 | Framework      | React 18             |
 | Bundler        | Vite 4               |
-| Styling        | CSS          |
+| Styling        | CSS                  |
 | ID Generation  | UUID                 |
 | Linting        | ESLint               |
 
