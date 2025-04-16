@@ -2,7 +2,7 @@
 
 A modern expense tracking application with intuitive controls and real-time filtering. Perfect for personal finance management.
 
-![Alt text](assets/appscreenshot.png)
+![Exoense Tracker Screenshot](./assets/appscreenshot.png)
 
 
 ## Features
@@ -44,7 +44,7 @@ A modern expense tracking application with intuitive controls and real-time filt
 ### Installation
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/expense-tracker.git
+git clone https://github.com/Chenzie2/expense-tracker.git
 
 # Navigate to project directory
 cd expense-tracker
@@ -60,6 +60,6 @@ npm run dev
 For personal use only.
 
 ### Contact
-Grace Zawadi
-Project Link: https://github.com/Chenzie2/expense-tracker
-
+**Author**: Grace Zawadi   
+- GitHub: [Chenzie2](https://github.com/Chenzie2)
+- Project Repository: [Expense Tracker GitHub](https://github.com/Chenzie2/expense-tracker)
