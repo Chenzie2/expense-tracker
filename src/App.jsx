@@ -44,7 +44,7 @@ function App() {
       <header style={{ textAlign: 'center', margin: '2rem auto' }}>
         <h1 style={{ color: '#a56cc1', fontSize: '2.5rem' }}>Expense Tracker</h1>
         <p style={{ maxWidth: '700px', margin: '0 auto', color: '#444' }}>
-          Track your daily expenses by adding and organizing your purchases by category.
+          Track your weekly expenses by adding and organizing your purchases by category.
           Use the search and sort options to quickly find and manage your spending.
         </p>
       </header>
