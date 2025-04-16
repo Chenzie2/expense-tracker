@@ -7,7 +7,7 @@
   padding: 1rem;
 }
 
-/* Left side form */
+/* Left Column - Form */
 .form-container {
   flex: 1;
   background: white;
@@ -16,19 +16,203 @@
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
-/* Right side: search, sort, table */
+.form-container h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.25rem;
+}
+
+.form-container input,
+.form-container select {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  transition: all 0.3s;
+}
+
+.form-container input:focus,
+.form-container select:focus {
+  border-color: #a56cc1;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(165, 108, 193, 0.2);
+}
+
+.form-container button {
+  background-color: #a56cc1;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+.form-container button:hover {
+  background-color: #8f5bb1;
+  transform: translateY(-1px);
+}
+
+/* Right Column - Table */
 .table-container {
   flex: 2;
   background: white;
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
-/* Responsive layout */
+/* Search/Sort Container */
+.table-controls {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.search-container {
+  flex: 1;
+  position: relative;
+}
+
+.search-container input {
+  width: 100%;
+  padding: 0.75rem 0.75rem 0.75rem 2.5rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  transition: all 0.3s;
+  font-family: 'Manrope', sans-serif;
+}
+
+.search-container input:focus {
+  border-color: #a56cc1;
+  box-shadow: 0 0 0 2px rgba(165, 108, 193, 0.2);
+}
+
+.sort-dropdown {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background-color: white;
+  font-family: 'Manrope', sans-serif;
+  cursor: pointer;
+}
+
+/* Enhanced Table */
+.expense-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+
+.expense-table thead {
+  position: sticky;
+  top: 0;
+}
+
+.expense-table th {
+  background-color: #8f5bb1;
+  color: white;
+  padding: 1rem;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+.expense-table td {
+  padding: 1rem;
+  border-top: 1px solid #eee;
+  vertical-align: middle;
+}
+
+/* Zebra Striping */
+.expense-table tr:nth-child(even) {
+  background-color: #faf5fd;
+}
+
+/* Number Alignment */
+.amount-cell {
+  font-family: 'Roboto Mono', monospace;
+  text-align: right;
+  font-weight: 500;
+  color: #2d2d2d;
+}
+
+/* Category Pills */
+.category-pill {
+  display: inline-block;
+  padding: 0.35rem 0.9rem;
+  border-radius: 1rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+/* Category Colors */
+.category-pill.Academics {
+  background: #e3f2fd;
+  color: #1565c0;
+}
+.category-pill.Food {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+.category-pill.Transport {
+  background: #fff3e0;
+  color: #ef6c00;
+}
+.category-pill.Entertainment {
+  background: #f3e5f5;
+  color: #8e24aa;
+}
+.category-pill.Ministry {
+  background: #e8eaf6;
+  color: #3949ab;
+}
+
+/* Hover Effects */
+.expense-table tr {
+  transition: all 0.2s ease;
+}
+
+.expense-table tr:hover {
+  background-color: #f3e5f5 !important;
+  transform: translateX(2px);
+}
+
+/* Delete Button */
+.delete-btn {
+  background: transparent;
+  color: #e74c3c;
+  border: 1px solid #e74c3c;
+  padding: 0.35rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.delete-btn:hover {
+  background-color: rgba(231, 76, 60, 0.1);
+  transform: scale(1.05);
+}
+
+.delete-btn:focus {
+  outline: 2px solid #a56cc1;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
   .app-container {
     flex-direction: column;
     padding: 1rem;
+  }
+  
+  body {
+    background: #f8f4fc;
   }
 }

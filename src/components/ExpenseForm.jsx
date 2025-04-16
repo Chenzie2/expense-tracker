@@ -8,13 +8,14 @@ function ExpenseForm({ onAddExpense }) {
 
   function handleSubmit(e) {
     e.preventDefault();
+
     const newExpense = {
-      id: Date.now(), //unique ID
       description,
       amount: parseFloat(amount),
       category,
       date,
     };
+
     onAddExpense(newExpense);
 
     // Reset the form
@@ -53,7 +54,7 @@ function ExpenseForm({ onAddExpense }) {
         onChange={(e) => setDate(e.target.value)}
         required
       />
-      <button type="submit">Add Expense</button>
+      <button type="submit">Submit</button>
     </form>
   );
 }

@@ -1,5 +1,5 @@
 :root {
-  font-family: system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   background-color: #f8f4fc;
   color: #2d2d2d;
 }
@@ -9,17 +9,19 @@ body {
   padding: 0;
   min-height: 100vh;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.6;
   background: linear-gradient(to right, #d7bce8 0%, #f8f4fc 25%);
 }
 
 h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
   color: #a56cc1;
   margin-bottom: 1rem;
+  font-weight: 600;
 }
 
 input, button, select {
-  font-family: inherit;
+  font-family: 'Manrope', inherit;
   font-size: 1rem;
 }
 
