@@ -2,7 +2,7 @@
 
 A modern expense tracking application with intuitive controls and real-time filtering. Perfect for personal finance management.
 
-![Expense Tracker Screenshot](./assets/appscreenshot.png)
+![Expense Tracker Screenshot](./src/images/screenshot.png)
 
 
 ## Features
