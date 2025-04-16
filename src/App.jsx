@@ -12,7 +12,7 @@ function App() {
   const [sortOption, setSortOption] = useState("default");
 
   function handleAddExpense(newExpense) {
-    const withId = { ...newExpense, id: uuidv4() };
+    const withId = { ...newExpense, id: uuidv4() }; 
     setExpenses([...expenses, withId]);
   }
 

@@ -1,12 +1,65 @@
-# React + Vite
+# My Expense Tracker (React)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern expense tracking application with intuitive controls and real-time filtering. Perfect for personal finance management.
 
-Currently, two official plugins are available:
+![Alt text](assets/appscreenshot.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Core Functionality
+- **Add Expenses**  
+  Form with validation for description, amount (KES), category, and date  
+- **Interactive Table**  
+  Clean display of all expenses with sorting capabilities  
+- **Instant Search**  
+  Filter by description or category as you type  
+- **One-Click Delete**  
+  Remove unwanted entries with confirmation  
+
+### Advanced Features
+- **Smart Sorting**  
+  Alphabetical sorting by description or category  
+- **Responsive Design**  
+  Fully functional on mobile, tablet, and desktop  
+- **Currency Formatting**  
+  Automatic KES formatting with proper thousand separators  
+
+## Tech Stack
+
+| Category       | Technology           |
+|----------------|----------------------|
+| Framework      | React 18             |
+| Bundler        | Vite 4               |
+| Styling        | CSS          |
+| ID Generation  | UUID                 |
+| Linting        | ESLint               |
+
+## Quick Start
+
+### Prerequisites
+- Node.js 
+- npm 
+
+### Installation
+```bash
+# Clone the repository
+git clone https://github.com/your-username/expense-tracker.git
+
+# Navigate to project directory
+cd expense-tracker
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+```
+
+### License
+For personal use only.
+
+### Contact
+Grace Zawadi
+Project Link: https://github.com/Chenzie2/expense-tracker
+
